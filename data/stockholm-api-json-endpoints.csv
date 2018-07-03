@@ -1,0 +1,52 @@
+method,path,description
+GET,/json,Gets root lists in JSON
+GET,DetailedServiceUnits/{idOrName}/json,Gets detailed service unit in JSON
+GET,DetailedServiceUnits/json,Gets detailed service units in JSON
+GET,FileInfos/json,Gets file infos in JSON
+GET,Files/{id}/Data,Gets file in byte stream
+GET,Files/{id}/json,Gets file in JSON
+GET,Files/json,Gets files in JSON
+GET,GeographicalAreaInfos/json,Gets geographical area infos in JSON
+GET,GeographicalAreas/{idOrFriendlyIdOrName}/DetailedServiceUnits/json,Gets geographical area detailed service units in JSON
+GET,GeographicalAreas/{idOrFriendlyIdOrName}/json,Gets geographical area in JSON
+GET,GeographicalAreas/{idOrFriendlyIdOrName}/ServiceUnitInfos/json,Gets geographical area service unit infos in JSON
+GET,GeographicalAreas/{idOrFriendlyIdOrName}/ServiceUnits/Count/json,Gets geographical area service units count in JSON
+GET,GeographicalAreas/{idOrFriendlyIdOrName}/ServiceUnits/json,Gets geographical area service units in JSON
+GET,GeographicalAreas/json,Gets geographical areas in JSON
+GET,ImageFileInfos/json,Gets image file infos in JSON
+GET,ImageFiles/{id}/Data,Gets image file in byte stream
+GET,ImageFiles/{id}/json,Gets image file in JSON
+GET,ImageFiles/json,Gets image files in JSON
+GET,ServiceUnitInfos/json,Gets service unit infos in JSON
+GET,ServiceUnits/{idOrName}/Attributes/json,Gets service unit attributes in JSON
+GET,ServiceUnits/{idOrName}/FileInfos/json,Gets service unit file infos in JSON
+GET,ServiceUnits/{idOrName}/Files/json,Gets service unit files in JSON
+GET,ServiceUnits/{idOrName}/GeographicalAreaInfos/json,Gets service unit geographical area infos in JSON
+GET,ServiceUnits/{idOrName}/GeographicalAreas/json,Gets service unit geographical areas in JSON
+GET,ServiceUnits/{idOrName}/ImageFileInfos/json,Gets service unit image file infos in JSON
+GET,ServiceUnits/{idOrName}/ImageFiles/json,Gets service unit image files in JSON
+GET,ServiceUnits/{idOrName}/json,Gets service unit in JSON
+GET,ServiceUnits/{idOrName}/RelatedServiceUnitInfos/json,Gets related service unit infos in JSON
+GET,ServiceUnits/{idOrName}/RelatedServiceUnits/json,Gets related service units in JSON
+GET,ServiceUnits/{idOrName}/ServiceUnitTypeGroupInfos/json,Gets service unit service unit type group infos in JSON
+GET,ServiceUnits/{idOrName}/ServiceUnitTypeGroups/json,Gets service unit service unit type groups in JSON
+GET,ServiceUnits/{idOrName}/ServiceUnitTypeInfos/json,Gets service unit service unit type infos in JSON
+GET,ServiceUnits/{idOrName}/ServiceUnitTypes/json,Gets service unit service unit types in JSON
+GET,ServiceUnits/Count/json,Gets service units count in JSON
+GET,ServiceUnits/json,Gets service units in JSON
+GET,ServiceUnitTypeGroupInfos/json,Gets service unit type group infos in JSON
+GET,ServiceUnitTypeGroups/{idOrName}/DetailedServiceUnits/json,Gets service unit type group detailed service units in JSON
+GET,ServiceUnitTypeGroups/{idOrName}/json,Gets service unit type group in JSON
+GET,ServiceUnitTypeGroups/{idOrName}/ServiceUnitInfos/json,Gets service unit type group service unit infos in JSON
+GET,ServiceUnitTypeGroups/{idOrName}/ServiceUnits/Count/json,Gets service unit type group service units count in JSON
+GET,ServiceUnitTypeGroups/{idOrName}/ServiceUnits/json,Gets service unit type group service units in JSON
+GET,ServiceUnitTypeGroups/{idOrName}/ServiceUnitTypeInfos/json,Gets service unit type group service unit type infos in JSON
+GET,ServiceUnitTypeGroups/{idOrName}/ServiceUnitTypes/json,Gets service unit type group service unit types in JSON
+GET,ServiceUnitTypeGroups/json,Gets service unit type groups in JSON
+GET,ServiceUnitTypeInfos/json,Gets service unit type infos in JSON
+GET,ServiceUnitTypes/{id}/DetailedServiceUnits/json,Gets service unit type detailed service units in JSON
+GET,ServiceUnitTypes/{id}/json,Gets service unit type in JSON
+GET,ServiceUnitTypes/{id}/ServiceUnitInfos/json,Gets service unit type service unit infos in JSON
+GET,ServiceUnitTypes/{id}/ServiceUnits/Count/json,Gets service unit type service units count in JSON
+GET,ServiceUnitTypes/{id}/ServiceUnits/json,Gets service unit type service units in JSON
+GET,ServiceUnitTypes/json,Gets service unit types in JSON

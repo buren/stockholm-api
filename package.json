@@ -1,0 +1,15 @@
+{
+  "name": "stockholm-api",
+  "version": "0.1.0",
+  "description": "Stockholm API",
+  "main": "index.js",
+  "dependencies": {
+    "node-fetch": "^2.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jacob Burenstam Linder",
+  "license": "MIT"
+}
