@@ -35,6 +35,6 @@ services.forEach((serviceName) => {
 console.log('=== [START] Fetch outside gyms ===')
 const gymServiceUnitId = '96a67da3-938b-487e-ac34-49b155cb277b'
 api.getServiceUnits({ ServiceUnitTypes: gymServiceUnitId }).then((data) => {
-  console.log('gyms', data)
+  console.log('gyms', data.map((d) => d.name))
 })
 console.log('=== [END] Fetch outside gyms ===')
