@@ -42,10 +42,11 @@ api.getServiceUnits({ name: grimstaGymServiceUnitId }).then((data) => {
 })
 ```
 
+[__Full API client documentation__](docs/README.md).
+
 ## Development
 
-Get setup
-
+Setup
 ```
 $ git clone https://github.com/buren/stockholm-api
 $ cd stockholm-api
@@ -57,6 +58,8 @@ then run
 ```
 $ node example.js
 ```
+
+[See the current API client documentation](docs/README.md).
 
 
 ## Contributing
