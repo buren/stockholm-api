@@ -134,3 +134,8 @@ These are the methods available on `api`.
 `params` must be one of
 
   - `undefined`
+
+## `getPlaceService(params)`
+`params` must be one of
+
+  - `undefined`
