@@ -46,6 +46,15 @@ api.getServiceUnits({ name: grimstaGymServiceUnitId }).then((data) => {
 })
 ```
 
+By default responses are parsed and some values are coerced (such as dates), you can disable the parsing
+```javascript
+const api = new StockholmAPI({
+  parse: false,
+  ServiceGuideServiceAPIKey: apiKey
+})
+```
+
+
 [__Full API client documentation__](docs/README.md).
 
 ## Contributing
