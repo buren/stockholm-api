@@ -1,11 +1,9 @@
 const StockholmAPI = require('./index')
 
 const serviceGuideServiceAPIKey = process.env.STOCKHOLM_API_SERVICE_GUIDE_SERVICE_API_KEY
-const placeServiceAPIKey = process.env.STOCKHOLM_API_PLACE_SERVICE_API_KEY
 
 const api = new StockholmAPI({
-  ServiceGuideServiceAPIKey: serviceGuideServiceAPIKey,
-  PlaceServiceAPIKey: placeServiceAPIKey,
+  ServiceGuideServiceAPIKey: serviceGuideServiceAPIKey
 })
 
 const services = [
