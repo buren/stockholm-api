@@ -104,6 +104,11 @@ These are the methods available on `api`.
   - `{ ServiceUnitTypeGroups: "value" }`,
   - `{ ServiceUnitTypes: "value" }`
 
+## `getRelatedServiceUnitInfos(params)`
+`params` must be one of
+
+  - `{ ServiceUnits: "value" }`
+
 ## `getServiceUnits(params)`
 `params` must be one of
 
@@ -115,6 +120,22 @@ These are the methods available on `api`.
   - `{ GeographicalAreas: "value" }`,
   - `{ ServiceUnitTypeGroups: "value" }`,
   - `{ ServiceUnitTypes: "value" }`
+
+## `getServiceUnitsCount(params)`
+`params` must be one of
+
+  - `undefined`
+  - `{ GeographicalAreas: "value" }`,
+  - `{ ServiceUnitTypeGroups: "value" }`,
+  - `{ ServiceUnitTypes: "value" }`
+
+## `getRelatedServiceUnits(params)`
+`params` must be one of
+
+  - `"value"` - resource `id`,
+  - `"value"` - resource `name`
+  - `{ id: "value" }`,
+  - `{ name: "value" }`
 
 ## `getServiceUnitTypes(params)`
 `params` must be one of
