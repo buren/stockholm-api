@@ -23,16 +23,19 @@ const services = [
 ]
 
 services.forEach((serviceName) => {
-  api.getService(serviceName).then((data) => {
-    console.log(`=== [START] service ${serviceName} ===`)
-    console.log(serviceName, data);
-    console.log(`=== [END] service ${serviceName} ===`)
-  })
+  api.getService(serviceName)
+    .then((data) => {
+      console.log(`=== [START] service ${serviceName} ===`)
+      console.log(serviceName, data);
+      console.log(`=== [END] service ${serviceName} ===`)
+    }).catch((error) => { console.error(error) })
 })
 
-console.log('=== [START] Fetch outside gyms ===')
 const gymServiceUnitId = '96a67da3-938b-487e-ac34-49b155cb277b'
-api.getServiceUnits({ ServiceUnitTypes: gymServiceUnitId }).then((data) => {
-  console.log('gyms', data.map((d) => d.name))
-})
-console.log('=== [END] Fetch outside gyms ===')
+api.getServiceUnits({ ServiceUnitTypes: gymServiceUnitId })
+  .then((data) => {
+    console.log('=== [START] Outside gyms ===')
+    console.log(data.map((d) => d.name))
+    console.log('=== [END] Outside gyms ===')
+  })
+  .catch((error) => { console.error(error) })
