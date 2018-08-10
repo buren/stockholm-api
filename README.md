@@ -29,6 +29,7 @@ const api = new StockholmAPI({ ServiceGuideServiceAPIKey: apiKey })
 ```
 
 Fetch all `ServiceUnits` of type "Utegym"/Outside gym
+
 ```javascript
 const gymServiceUnitId = '96a67da3-938b-487e-ac34-49b155cb277b'
 api.getServiceUnits({ ServiceUnitTypes: gymServiceUnitId })
@@ -38,6 +39,7 @@ api.getServiceUnits({ ServiceUnitTypes: gymServiceUnitId })
 ```
 
 Fetch one `ServiceUnit`
+
 ```javascript
 
 const grimstaGymServiceUnitId = '2eec914c-595d-4148-85cb-97b35c7694d2'
@@ -48,6 +50,7 @@ api.getServiceUnits({ name: grimstaGymServiceUnitId })
 ```
 
 By default responses are parsed and some values are coerced (such as dates), you can disable the parsing
+
 ```javascript
 const api = new StockholmAPI({
   parse: false,
@@ -64,7 +67,7 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/buren/
 ## Wish list
 
 - Test suite!
-- Better documentation for public methods in `client.js`
+- Isomorphic
 - Describe each endpoint type - for example `ServiceUnitTypeGroupInfos` etc.
 
 ## Development
@@ -84,7 +87,7 @@ export STOCKHOLM_API_SERVICE_GUIDE_SERVICE_API_KEY=your_api_key
 then to call most services index endpoint, run
 
 ```
-$ node kitchen-sink.js # should print a lot of JSON
+$ npm run kitchen-sink # should print a lot of JSON
 ```
 
 [See the current API client documentation](docs/README.md).
