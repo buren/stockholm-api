@@ -6,8 +6,8 @@ const paramsArgValueTypeDoc = (value, type) => `\n  - \`"value"\` - resource \`$
 const paramsArgValueTypeObjectDoc = (value, type) => `\n  - \`{ ${value}: "value" }\``
 
 const generateDocs = () => {
-  return Object.keys(Endpoints).map((name) => {
-    const service = Endpoints[name]
+  return Object.keys(Endpoints.routes).map((name) => {
+    const service = Endpoints.get(name)
     let paramParts = []
 
     if (service.index === true) {
