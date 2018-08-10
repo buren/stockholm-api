@@ -3,7 +3,7 @@ const StockholmAPI = require('./index')
 const serviceGuideServiceAPIKey = process.env.STOCKHOLM_API_SERVICE_GUIDE_SERVICE_API_KEY
 
 const api = new StockholmAPI({
-  ServiceGuideServiceAPIKey: serviceGuideServiceAPIKey
+  ServiceGuideServiceAPIKey: serviceGuideServiceAPIKey,
 })
 
 const services = [
@@ -35,7 +35,7 @@ const fileID = '2a1ab309-7a8f-4024-ac17-a3d74d4b60f9'
 api.getFilesData(fileID)
   .then((data) => {
     console.log('=== [START] PDF ===')
-    console.log(data);
+    console.log(data)
     console.log('=== [END] PDF ===')
   })
   .catch((error) => { console.error(error) })
