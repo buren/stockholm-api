@@ -4,6 +4,7 @@ Simple JavaScript API client for [Stockholm API](http://api.stockholm.se/dokumen
 
 - [Getting started](#getting-started)
 - [Usage](#usage)
+- [Full documentation](docs/README.md)
 - [Contributing](#contributing)
 
 ## Getting started
@@ -13,8 +14,6 @@ Requires `node` >= 8.9.0
 ```
 npm install --save stockholm-api
 ```
-
-:information_source: There is a lot of non-obvious names in the API.. documentation is available at http://api.stockholm.se/dokumentation, however its not "readable" by any metric. There is also [dataportalen.stockholm.se/dataportalen](http://dataportalen.stockholm.se/dataportalen/).
 
 # Usage
 
@@ -32,17 +31,27 @@ const api = new StockholmAPI({ ServiceGuideServiceAPIKey: apiKey })
 Fetch all `ServiceUnits` of type "Utegym"/Outside gym
 ```javascript
 const gymServiceUnitId = '96a67da3-938b-487e-ac34-49b155cb277b'
-api.getServiceUnits({ ServiceUnitTypes: gymServiceUnitId }).then((data) => {
-  console.log('outside gyms', data)
-})
+api.getServiceUnits({ ServiceUnitTypes: gymServiceUnitId })
+  .then((data) => {
+    console.log('outside gyms', data)
+  })
 ```
 
 Fetch one `ServiceUnit`
 ```javascript
 
 const grimstaGymServiceUnitId = '2eec914c-595d-4148-85cb-97b35c7694d2'
-api.getServiceUnits({ name: grimstaGymServiceUnitId }).then((data) => {
-  console.log('Grimsta outside gym', data)
+api.getServiceUnits({ name: grimstaGymServiceUnitId })
+  .then((data) => {
+    console.log('Grimsta outside gym', data)
+  })
+```
+
+By default responses are parsed and some values are coerced (such as dates), you can disable the parsing
+```javascript
+const api = new StockholmAPI({
+  parse: false,
+  ServiceGuideServiceAPIKey: apiKey
 })
 ```
 
