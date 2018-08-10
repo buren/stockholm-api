@@ -26,10 +26,19 @@ services.forEach((serviceName) => {
   api.getService(serviceName)
     .then((data) => {
       console.log(`=== [START] service ${serviceName} ===`)
-      console.log(serviceName, data);
+      console.log(serviceName, data)
       console.log(`=== [END] service ${serviceName} ===`)
     }).catch((error) => { console.error(error) })
 })
+
+const fileID = '2a1ab309-7a8f-4024-ac17-a3d74d4b60f9'
+api.getFilesData(fileID)
+  .then((data) => {
+    console.log('=== [START] PDF ===')
+    console.log(data);
+    console.log('=== [END] PDF ===')
+  })
+  .catch((error) => { console.error(error) })
 
 const gymServiceUnitId = '96a67da3-938b-487e-ac34-49b155cb277b'
 api.getServiceUnits({ ServiceUnitTypes: gymServiceUnitId })
