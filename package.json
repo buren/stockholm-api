@@ -4,7 +4,7 @@
   "description": "Stockholm API",
   "main": "index.js",
   "dependencies": {
-    "node-fetch": "^2.1.2"
+    "cross-fetch": "^2.1.2"
   },
   "devDependencies": {},
   "scripts": {
