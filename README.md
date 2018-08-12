@@ -129,4 +129,4 @@ $ npm run kitchen-sink # should print a lot of JSON
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](LICENSE).
+The library is available as open source under the terms of the [MIT License](LICENSE).
