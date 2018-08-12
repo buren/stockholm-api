@@ -52,7 +52,7 @@ const gymServiceUnitId = '96a67da3-938b-487e-ac34-49b155cb277b'
 api.getServiceUnits({ ServiceUnitTypes: gymServiceUnitId })
   .then((data) => {
     console.log('=== [START] Outside gyms ===')
-    console.log(data.map((d) => d.name))
+    console.log(data)
     console.log('=== [END] Outside gyms ===')
   })
   .catch((error) => { console.error(error) })

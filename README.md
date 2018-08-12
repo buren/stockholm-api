@@ -5,6 +5,7 @@ Simple JavaScript API client for [Stockholm API](http://api.stockholm.se/dokumen
 - [Getting started](#getting-started)
 - [Usage](#usage)
 - [API Client method documentation](docs/README.md)
+- [Endpoint Schema](endpoint-schema.md)
 - [Links](#links)
 - [Contributing](#contributing)
 
@@ -79,16 +80,14 @@ api.getServiceUnitTypeGroups({ name: name })
   .catch((error) => { console.error(error) })
 ```
 
-By default responses are parsed and some values are coerced (such as dates), you can disable the parsing
-
+:calendar: Dates returned from the API are in a weird format `/Date(1330524285303+0100)/`, you can require a helper function that converts it to a JavaScript date object (UTC)
 ```javascript
-const api = new StockholmAPI({
-  parse: false,
-  ServiceGuideServiceAPIKey: apiKey
-})
+const convertAPIDate = require('./stockholm-api/convert-api-date')
+const dateString = '/Date(1330524285303+0100)/'
+console.log(convertAPIDate(dateString)) // 2012-02-29T13:04:45.303Z
 ```
 
-[__API client method documentation__](docs/README.md).
+See the [full API client documentation](docs/README.md) or the [Endpoint Schema](endpoint-schema.md).
 
 ## Contributing
 
