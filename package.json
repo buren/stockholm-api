@@ -8,7 +8,9 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified - you can run 'npm run kitchen-sink' to try a bunch of requests \" && exit 1",
+    "kitchen-sink": "node kitchen-sink.js",
+    "docs": "node generate-docs.js"
   },
   "author": "Jacob Burenstam Linder",
   "license": "MIT"

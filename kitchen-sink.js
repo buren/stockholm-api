@@ -1,10 +1,18 @@
 const StockholmAPI = require('./index')
-
 const serviceGuideServiceAPIKey = process.env.STOCKHOLM_API_SERVICE_GUIDE_SERVICE_API_KEY
+const baseURL = process.argv[process.argv.length - 1]
 
-const api = new StockholmAPI({
-  ServiceGuideServiceAPIKey: serviceGuideServiceAPIKey,
-})
+const options = { ServiceGuideServiceAPIKey: serviceGuideServiceAPIKey }
+if (baseURL.indexOf('http://') === 0) {
+  options.baseURL = baseURL
+}
+
+if (!options.ServiceGuideServiceAPIKey) {
+  throw new Error('Please set STOCKHOLM_API_SERVICE_GUIDE_SERVICE_API_KEY.')
+}
+
+
+const api = new StockholmAPI(options)
 
 const services = [
   'FileInfos',

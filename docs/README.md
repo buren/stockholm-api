@@ -31,6 +31,7 @@ Please note that currently there is no way to call both `ServiceGuideService` an
 __Response parsing__
 
 By default responses are parsed and some values are coerced (such as dates), you can disable the parsing by passing `parse: false` when initializing the API client
+
 ```javascript
 const api = new StockholmAPI({
   parse: false,
@@ -38,17 +39,25 @@ const api = new StockholmAPI({
 })
 ```
 
+You can get the parser for any endpoint, which can be handy if you've disabled automatic parsing, but would like to parse some responses
+
+```javascript
+api.parserFor('ServiceGuideService')
+```
+
 ## Examples
 
 See other examples in [`kitchen-sink.js`](kitchen-sink.js).
 
 Initialize
+
 ```javascript
 const serviceGuideServiceAPIKey = 'your_api_key' // required
 const api = new StockholmAPI({ ServiceGuideServiceAPIKey: apiKey })
 ```
 
 Fetch all `ServiceUnits` of type "Utegym"/Outside gym
+
 ```javascript
 const gymServiceUnitId = '96a67da3-938b-487e-ac34-49b155cb277b'
 api.getServiceUnits({ ServiceUnitTypes: gymServiceUnitId })
@@ -58,8 +67,8 @@ api.getServiceUnits({ ServiceUnitTypes: gymServiceUnitId })
 ```
 
 Fetch one `ServiceUnit`
-```javascript
 
+```javascript
 const grimstaGymServiceUnitId = '2eec914c-595d-4148-85cb-97b35c7694d2'
 api.getServiceUnits({ name: grimstaGymServiceUnitId })
   .then((data) => {
