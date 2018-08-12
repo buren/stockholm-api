@@ -4,7 +4,7 @@ Simple JavaScript API client for [Stockholm API](http://api.stockholm.se/dokumen
 
 - [Getting started](#getting-started)
 - [Usage](#usage)
-- [Full documentation](docs/README.md)
+- [API Client method documentation](docs/README.md)
 - [Links](#links)
 - [Contributing](#contributing)
 
@@ -20,14 +20,22 @@ npm install --save stockholm-api
 
 :warning: You must have an API key to make any request. [Request one at api.stockholm.se](http://api.stockholm.se/).
 
+Stockholm API keys are split in two `ServiceGuideService` ("Enhetsdatabasen"/Entity database) and `PlaceService` ("Platsdatabasen"/Place database) and you request the API keys separately.
+
 Initialize
 
 ```javascript
 const StockholmAPI = require('stockholm-api')
 
-const apiKey = 'your_api_key'
-const api = new StockholmAPI({ ServiceGuideServiceAPIKey: apiKey })
+const serviceGuideServiceAPIKey = 'your_api_key' // required
+const serviceAPI = new StockholmAPI({ ServiceGuideServiceAPIKey: serviceGuideServiceAPIKey })
+
+// or to initialize a PlaceService client
+const placeServiceAPIKey = 'your_api_key' // required
+const placeAPI = new StockholmAPI({ PlaceServiceAPIKey: placeServiceAPIKey })
 ```
+
+Please note that currently there is no way to call both `ServiceGuideService` and `PlaceService` using one instance of the client - you have to create two if you need to talk to both.
 
 Fetch all `ServiceUnits` of type "Utegym"/Outside gym
 
