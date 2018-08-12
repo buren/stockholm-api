@@ -78,7 +78,6 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/buren/
 ## Wish list
 
 - Test suite!
-- Isomorphic
 - Describe each endpoint type - for example `ServiceUnitTypeGroupInfos` etc.
 - TypeScript definitions
 
