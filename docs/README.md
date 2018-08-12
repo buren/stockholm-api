@@ -185,6 +185,7 @@ These are the methods available on `api` (all methods are available for both `Se
   - `{ GeographicalAreas: "value" }`,
   - `{ ServiceUnitTypeGroups: "value" }`,
   - `{ ServiceUnitTypes: "value" }`
+  - `{ search: { name: "value" } }`
 
 ## `getServiceUnitInfos(params)`
 `params` must be one of
@@ -193,6 +194,7 @@ These are the methods available on `api` (all methods are available for both `Se
   - `{ GeographicalAreas: "value" }`,
   - `{ ServiceUnitTypeGroups: "value" }`,
   - `{ ServiceUnitTypes: "value" }`
+  - `{ search: { name: "value" } }`
 
 ## `getRelatedServiceUnitInfos(params)`
 `params` must be one of
@@ -210,6 +212,7 @@ These are the methods available on `api` (all methods are available for both `Se
   - `{ GeographicalAreas: "value" }`,
   - `{ ServiceUnitTypeGroups: "value" }`,
   - `{ ServiceUnitTypes: "value" }`
+  - `{ search: { name: "value" } }`
 
 ## `getServiceUnitsCount(params)`
 `params` must be one of

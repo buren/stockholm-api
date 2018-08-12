@@ -49,6 +49,17 @@ api.getServiceUnits({ id: id })
   })
 ```
 
+Search
+
+```javascript
+const name = 'stockholm'
+api.getServiceUnits({ search: { name: name }})
+  .then((data) => {
+    console.log('stockholm search', data)
+  })
+  .catch((error) => { console.error(error) })
+```
+
 Parameters are automatically URI encoded
 
 ```javascript

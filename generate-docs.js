@@ -4,6 +4,7 @@ const Endpoints = require('./lib/endpoints')
 const paramsArgValueDoc = (v) => `\n  - \`${v}\``
 const paramsArgValueTypeDoc = (value, type) => `\n  - \`"value"\` - resource \`${value}\``
 const paramsArgValueTypeObjectDoc = (value, type) => `\n  - \`{ ${value}: "value" }\``
+const paramsSearchValue = (name) => `\n  - \`{ search: { ${name}: "value" } }\``
 
 const generateDocs = () => {
   return Endpoints.serviceNames().map((name) => {
@@ -16,6 +17,7 @@ const generateDocs = () => {
     paramParts.push(service.ids.map((id) => paramsArgValueTypeDoc(id)))
     paramParts.push(service.ids.map((id) => paramsArgValueTypeObjectDoc(id)))
     paramParts.push(service.filters.map((f) => paramsArgValueTypeObjectDoc(f)))
+    paramParts.push(service.search.map((q) => paramsSearchValue(q)))
 
     paramParts = paramParts.filter((e) => e.length !== 0)
 
