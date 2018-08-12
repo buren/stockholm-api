@@ -3,6 +3,15 @@
   "version": "0.1.0",
   "description": "Stockholm API",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/buren/stockholm-api.git"
+  },
+  "keywords": [
+    "stockholm",
+    "stockholm api",
+    "client"
+  ],
   "dependencies": {
     "cross-fetch": "^2.1.2"
   },
