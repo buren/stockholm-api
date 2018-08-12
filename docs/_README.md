@@ -28,23 +28,6 @@ const placeAPI = new StockholmAPI({ PlaceServiceAPIKey: placeServiceAPIKey })
 
 Please note that currently there is no way to call both `ServiceGuideService` and `PlaceService` using one instance of the client - you have to create two if you need to talk to both.
 
-__Response parsing__
-
-By default responses are parsed and some values are coerced (such as dates), you can disable the parsing by passing `parse: false` when initializing the API client
-
-```javascript
-const api = new StockholmAPI({
-  parse: false,
-  ServiceGuideServiceAPIKey: apiKey
-})
-```
-
-You can get the parser for any endpoint, which can be handy if you've disabled automatic parsing, but would like to parse some responses
-
-```javascript
-api.parserFor('ServiceGuideService')
-```
-
 ## Examples
 
 See other examples in [`kitchen-sink.js`](kitchen-sink.js).
