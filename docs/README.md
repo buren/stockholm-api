@@ -59,8 +59,8 @@ const api = new StockholmAPI({ ServiceGuideServiceAPIKey: apiKey })
 Fetch all `ServiceUnits` of type "Utegym"/Outside gym
 
 ```javascript
-const gymServiceUnitId = '96a67da3-938b-487e-ac34-49b155cb277b'
-api.getServiceUnits({ ServiceUnitTypes: gymServiceUnitId })
+const id = '96a67da3-938b-487e-ac34-49b155cb277b'
+api.getServiceUnits({ ServiceUnitTypes: id })
   .then((data) => {
     console.log('outside gyms', data)
   })
@@ -69,11 +69,22 @@ api.getServiceUnits({ ServiceUnitTypes: gymServiceUnitId })
 Fetch one `ServiceUnit`
 
 ```javascript
-const grimstaGymServiceUnitId = '2eec914c-595d-4148-85cb-97b35c7694d2'
-api.getServiceUnits({ name: grimstaGymServiceUnitId })
+const id = '2eec914c-595d-4148-85cb-97b35c7694d2'
+api.getServiceUnits({ ud: id })
   .then((data) => {
     console.log('Grimsta outside gym', data)
 })
+```
+
+Parameters are automatically URI encoded
+
+```javascript
+const name = 'Familj och relation'
+api.getServiceUnitTypeGroups({ name: name })
+  .then((data) => {
+    console.log(data)
+  })
+  .catch((error) => { console.error(error) })
 ```
 
 See other examples in [`kitchen-sink.js`](kitchen-sink.js).

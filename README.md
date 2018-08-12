@@ -5,6 +5,7 @@ Simple JavaScript API client for [Stockholm API](http://api.stockholm.se/dokumen
 - [Getting started](#getting-started)
 - [Usage](#usage)
 - [Full documentation](docs/README.md)
+- [Links](#links)
 - [Contributing](#contributing)
 
 ## Getting started
@@ -31,8 +32,8 @@ const api = new StockholmAPI({ ServiceGuideServiceAPIKey: apiKey })
 Fetch all `ServiceUnits` of type "Utegym"/Outside gym
 
 ```javascript
-const gymServiceUnitId = '96a67da3-938b-487e-ac34-49b155cb277b'
-api.getServiceUnits({ ServiceUnitTypes: gymServiceUnitId })
+const id = '96a67da3-938b-487e-ac34-49b155cb277b'
+api.getServiceUnits({ ServiceUnitTypes: id })
   .then((data) => {
     console.log('outside gyms', data)
   })
@@ -41,12 +42,22 @@ api.getServiceUnits({ ServiceUnitTypes: gymServiceUnitId })
 Fetch one `ServiceUnit`
 
 ```javascript
-
-const grimstaGymServiceUnitId = '2eec914c-595d-4148-85cb-97b35c7694d2'
-api.getServiceUnits({ name: grimstaGymServiceUnitId })
+const id = '2eec914c-595d-4148-85cb-97b35c7694d2'
+api.getServiceUnits({ id: id })
   .then((data) => {
     console.log('Grimsta outside gym', data)
   })
+```
+
+Parameters are automatically URI encoded
+
+```javascript
+const name = 'Familj och relation'
+api.getServiceUnitTypeGroups({ name: name })
+  .then((data) => {
+    console.log(data)
+  })
+  .catch((error) => { console.error(error) })
 ```
 
 By default responses are parsed and some values are coerced (such as dates), you can disable the parsing
@@ -92,6 +103,12 @@ $ npm run kitchen-sink # should print a lot of JSON
 ```
 
 [See the current API client documentation](docs/README.md).
+
+## Links
+
+- [Blogpost explaining the API](http://utveckling.stockholm.se/2011/06/03/how-to-use-the-city-of-stockholm-open-api/)
+- [Stockholm API Documentation](http://api.stockholm.se/dokumentation)
+- [Stockolm Dataportalen](http://dataportalen.stockholm.se/dataportalen/)
 
 ## License
 
