@@ -56,3 +56,13 @@ api.getServiceUnits({ ServiceUnitTypes: gymServiceUnitId })
     console.log('=== [END] Outside gyms ===')
   })
   .catch((error) => { console.error(error) })
+
+// URL parameters are automatically encoded
+const serviceUnitTypeGroupName = 'Familj och relation'
+api.getServiceUnitTypeGroups({ name: serviceUnitTypeGroupName })
+  .then((data) => {
+    console.log('=== [START] Familj och relation ===')
+    console.log(JSON.stringify(data, null, 2))
+    console.log('=== [END] Familj och relation ===')
+  })
+  .catch((error) => { console.error(error) })
