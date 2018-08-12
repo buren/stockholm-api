@@ -79,7 +79,7 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/buren/
 
 - Test suite!
 - Describe each endpoint type - for example `ServiceUnitTypeGroupInfos` etc.
-- TypeScript definitions
+- TypeScript definitions (move to TypeScript?)
 
 ## Development
 
