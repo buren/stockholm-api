@@ -62,7 +62,17 @@ const serviceUnitTypeGroupName = 'Familj och relation'
 api.getServiceUnitTypeGroups({ name: serviceUnitTypeGroupName })
   .then((data) => {
     console.log('=== [START] Familj och relation ===')
-    console.log(JSON.stringify(data, null, 2))
+    console.log(data)
     console.log('=== [END] Familj och relation ===')
+  })
+  .catch((error) => { console.error(error) })
+
+// Search
+const serviceUnitSearchName = 'stockholm'
+api.getServiceUnits({ search: { name: serviceUnitSearchName }})
+  .then((data) => {
+    console.log('=== [START] Stockholm search ===')
+    console.log(data)
+    console.log('=== [END] Stockholm search ===')
   })
   .catch((error) => { console.error(error) })
