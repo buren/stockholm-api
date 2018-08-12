@@ -1,12 +1,12 @@
 # Endpoint Schema
 
-## FileInfo
+## FileInfos
 ```
 Id (uuid)
 Name (String)
 ```
 
-## File
+## Files
 ```
 ContentType(string) - image/jpeg
 Description(string)
@@ -22,13 +22,13 @@ TimeCreated(weird date) - /Date(1514534566347+0100)/
 TimeUpdated(weird date) - /Date(1514534566347+0100)/
 ```
 
-## ImageFileInfo
+## ImageFileInfos
 ```
 Id (uuid)
 Name (String)
 ```
 
-## ImageFile
+## ImageFiles
 ```
 ContentType(string) - image/jpeg
 Description(string)
@@ -44,14 +44,14 @@ TimeCreated(weird date) - /Date(1514534566347+0100)/
 TimeUpdated(weird date) - /Date(1514534566347+0100)/
 ```
 
-## GeographicalAreaInfo
+## GeographicalAreaInfos
 ```
 FriendlyId(string)
 Id(integer)
 Name(string)
 ```
 
-## GeographicalArea
+## GeographicalAreas
 ```
 FriendlyId(string)
 Id(integer)
@@ -60,19 +60,19 @@ Name(string)
 ```
 
 
-## ServiceUnitTypeGroupInfo
+## ServiceUnitTypeGroupInfos
 ```
 Id(integer)
 Name(string)
 ```
 
-## ServiceUnitTypeGroup
+## ServiceUnitTypeGroups
 ```
 Id(integer)
 Name(string)
 ```
 
-## ServiceUnitTypeInfo
+## ServiceUnitTypeInfos
 ```
 Id(integer)
 SingularName(string)
@@ -86,7 +86,7 @@ Attributes(json)
   Value
 ```
 
-## DetailedServiceUnit
+## DetailedServiceUnits
 ```
 Id(string)
 Name
@@ -119,14 +119,14 @@ ServiceUnitTypes(json)
     TimeUpdated(weird date) - /Date(1514534566347+0100)/
 ```
 
-## ServiceUnitInfo
+## ServiceUnitInfos
 ```
 Id(uuid)
 Name(string)
 ```
 
-```
 ## ServiceUnits
+```
 Id(uuid)
 Name(string)
 TimeCreated(weird date) - /Date(1514534566347+0100)/
@@ -136,7 +136,7 @@ GeographicalPosition(json)
   Y(integer)
 ```
 
-## ServiceUnitType
+## ServiceUnitTypes
 ```
 DefinitiveName(string)
 Id(uuid)
