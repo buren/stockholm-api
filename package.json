@@ -14,7 +14,7 @@
     "client"
   ],
   "dependencies": {
-    "cross-fetch": "^2.1.2"
+    "cross-fetch": "^3.0.2"
   },
   "devDependencies": {},
   "scripts": {
